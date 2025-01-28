@@ -35,11 +35,17 @@ for(album in album.sub){
   for(track in tracks){
     name = str_sub(track, start = 1, end = length(track)-6)
     location = paste('"', album, track, '"', sep = "/")
-    #print(name)
     split = str_split(name, "-")
-    #print(split)
     track.name = split[[1]][length(split[[1]])]
-    print(track.name)
+    artist = split[[1]][length(split[[1]])-1]
+    #print(name)
     #print(location)
+    #print(split)
+    #print(track.name)
+    #print(artist)
+    album.split = str_split(album, "/")
+    just.album = album.split[[1]][length(album.split[[1]])]
+    output = paste(artist, just.album, track.name, ".json", sep = "-")
+    print(output)
   }
 }
