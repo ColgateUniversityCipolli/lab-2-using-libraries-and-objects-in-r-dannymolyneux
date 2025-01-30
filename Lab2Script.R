@@ -53,6 +53,6 @@ for(album in album.sub) { #loop through albums
 #print(album.sub)
 print(code.to.process)
 
-#Step 4
+#step 4
 writeLines(code.to.process, "batfile.txt")
 
