@@ -56,3 +56,24 @@ print(code.to.process)
 #step 4
 writeLines(code.to.process, "batfile.txt")
 
+#Task 2
+
+#Step 0
+#install.packages("jsonlite")
+library(jsonlite)
+#Step 1
+print(list.files())
+#json.files = c()
+for (file in list.files()) {
+  if (str_count(file, pattern = ".json") > 0){
+    file.split = str_split(file, "-")
+    track.name = file.split[[1]][length(file.split[[1]])]
+    track.album = file.split[[1]][length(file.split[[1]])-1]
+    track.artist = file.split[[1]][length(file.split[[1]])-2]
+    just.track = str_sub(track.name, start = 1, end = length(track.name)-7)
+    print(track.artist)
+    print(track.album)
+    print(just.track)
+  }
+}
+
