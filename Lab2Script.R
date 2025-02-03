@@ -79,6 +79,13 @@ for (file in list.files()) {
 }
 
 #Step 2
-fromJSON("The Front Bottoms-Talon Of The Hawk-Au Revoir (Adios).json")
+json.r = fromJSON("The Front Bottoms-Talon Of The Hawk-Au Revoir (Adios).json")
+(average_loudness = json.r[[1]][[1]])
+(mean_spectral_energy = json.r[[1]][[27]][[6]])
+(danceability = json.r[[3]][[10]])
+(bpm = json.r[[3]][[3]]) #tempo in beats per minute
+(key_key = json.r[[4]][[length(json.r[[4]])-1]]) #musical key
+(key_scale = json.r[[4]][[length(json.r[[4]])]]) #musical mode
+(length = json.r[[2]][[1]][[4]]) #duration in seconds
 
-
+  
