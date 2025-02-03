@@ -61,6 +61,7 @@ writeLines(code.to.process, "batfile.txt")
 #Step 0
 #install.packages("jsonlite")
 library(jsonlite)
+
 #Step 1
 print(list.files())
 #json.files = c()
@@ -76,4 +77,8 @@ for (file in list.files()) {
     print(just.track)
   }
 }
+
+#Step 2
+fromJSON("The Front Bottoms-Talon Of The Hawk-Au Revoir (Adios).json")
+
 
