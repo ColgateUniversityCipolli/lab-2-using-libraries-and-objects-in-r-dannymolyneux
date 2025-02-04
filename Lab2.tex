@@ -90,7 +90,7 @@
 
 \begin{multicols}{2}
 \begin{abstract}
-In this lab we are tasked with building a batch file to improve efficiency when dealing with many files. In this case, these files are tracks. I use many different functions including paste(), str_sub(), str_split(), and many more in order to extract and display certain information for each track. The other task is to process the output of a .JSON file. This is helpful because it makes it possible to extract attributes of songs such as average loudness, danceability, etc. 
+In this lab we are tasked with building a batch file to improve efficiency when dealing with many files. In this case, these files are tracks. I use many different functions including paste(), str sub(), str split(), and many more in order to extract and display certain information for each track. The other task is to process the output of a .JSON file. This is helpful because it makes it possible to extract attributes of songs such as average loudness, danceability, etc. 
 \end{abstract}
 
 \noindent \textbf{Keywords:} Accessing; directories; files; loops
@@ -98,24 +98,14 @@ In this lab we are tasked with building a batch file to improve efficiency when 
 \section{Introduction}
 The goal here is to address the question "Which band contributed most to the song?". We don't go on to answer this question in this lab, but we make progress towards being able to answer that kind of question. This comes from a song in 2018 that The Front Bottoms and Manchester Orchestra collaborated on, called Allen Town. 
 
-You want to provide enough background to understand the context of the work. Specifically, what is the question you are addressing? If it applies, describe what information currently exists about this problem, including citations, and explain how the question you're answering complements this work.
-
-Provide a roadmap of the structure of the paper. 
-
-\subsection{Intro Subsection}
-You might need/want to discuss the topics in subsections. Or, you may have multiple questions.
-
+Like I said, we don't answer the overarching question about who contributed more, but we do build a batch file that can process all of the tracks, as well as process the output of a JSON file.
 
 \section{Methods}
-Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
-\begin{quote}
-\textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
-\end{quote}
-Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
+Here I am working with a music directory that contains two authors, each having multiple albums, containing multiple tracks.
 
+First I had to download the directory of the songs as well as install the stringr \citep{stringr} package for R. Then I did some practice with listing directories and using string count() to make a subset of album subdirectories. I used additional methods such as paste(), str.split(), and str.sub() to modify and extract from the various albums and track files. This is helpful when there is a specific desired output like "artist name - album name - trackname". Finally, I used the writeLines() method to create the batch file.
 
-\subsection{Methods Subsection}
-Much like the Introduction, subsections can be helpful for the Methods section. For example, you might describe data collection and the statistical analyses of the collected data in different subsections. Or, you may have different questions that require distinct methods. 
+The other main task involved installing the jsonlite \citep{jsonlite} package for R, and using the similar fucntions in order to modify .JSON files. I used fromJSON() to process the output and eventually extract various attributes from the file such as loudness, bpm, and danceability.
 
 \section{Results}
 Tie together the Introduction -- where you introduce the problem at hand -- and the methods --  what you propose to do to answer the question. Present your data, the results of your analyses, and how each reported aspect contributes to answering the question. This section should include table(s), statistic(s), and graphical displays. Make sure to put the results in a sensible order and that each result contributes a logical and developed solution. It should not just be a list. Avoid being repetitive. 
@@ -134,21 +124,11 @@ Finally, provide some concluding remarks that tie together the entire paper. Thi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{2em}
 
-\noindent\textbf{Bibliography:} Note that when you add citations to your bib.bib file \emph{and}
-you cite them in your document, the bibliography section will automatically populate here.
+\noindent\textbf{Bibliography:}
 
 \begin{tiny}
 \bibliography{bib}
 \end{tiny}
 \end{multicols}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Appendix
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\onecolumn
-\section{Appendix}
-
-If you have anything extra, you can add it here in the appendix. This can include images or tables that don't work well in the two-page setup, code snippets you might want to share, etc.
 
 \end{document}
