@@ -59,7 +59,6 @@ The other main task involved installing the jsonlite \citep{jsonlite} package fo
 \section{Results}
 Although I didn't really get results that answer any questions, now I know how to extract all of these various attributes of a .JSON file that could indicate how much someone contributes to a song. For example, how the length of time each band was playing, or how loud they were in relation to each other. Because we were using a song just by The Front Bottoms, we didn't get to do any comparison or analysis, but this will be very helpful moving forward.
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
